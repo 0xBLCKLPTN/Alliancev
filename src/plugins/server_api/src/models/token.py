@@ -16,3 +16,13 @@ class User(BaseModel):
     password: str
     alliance_info: AllianceShortInfo = None
 
+class BoardInfo(BaseModel):
+    name: str
+
+class Task(BaseModel):
+    name: str
+    description: str
+
+class Board(BaseModel):
+    info: BoardInfo
+    tasks: List[Task] = List[None]
